@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: tittlejosephpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tittlejosephpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: tittlejosephpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: tittlejosephpipelinesjavascriptdocker 
+          image: mycontainerregistry76.azurecr.io/tittlejosephpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
